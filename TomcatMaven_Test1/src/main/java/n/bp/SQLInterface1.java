@@ -18,6 +18,8 @@ public class SQLInterface1 {
 		// TODO Auto-generated method stub
 		SQLInterface1 sqlint1 = new SQLInterface1();
 		sqlint1.setConnection();
+		sqlint1.getkleur();
+		sqlint1.sluitConnectie();
 		
 	}
 	
@@ -37,7 +39,7 @@ public class SQLInterface1 {
 
 		try {
 			
-			Connection connection = DriverManager.getConnection("jdbc:mariadb://accmdb01.bpittens.nl:3306/DB?user=mariadb&password=mBwahlbs1967#");
+			connection = DriverManager.getConnection("jdbc:mariadb://accmdb01.bpittens.nl:3306/employees?user=mariadb&password=Bwahlbs1967#");
 			System.out.println("geslaagd");
 			// 
 			
@@ -59,17 +61,19 @@ public class SQLInterface1 {
 		
 	}
 	
-	public String getkleur() {
+	public void getkleur() {
 
 			Statement stmt = null;
-			String query = "Select * from KLEURTABEL";
+			String query = "Select * from employees limit 20";
 			
 			try {
 				stmt = this.connection.createStatement();
 				 ResultSet rs = stmt.executeQuery(query);
 			        
 			        while (rs.next()) {
-			        	kleur = rs.getString("KLEUR");
+			        	kleur = rs.getString("first_name");
+			        	System.out.println(kleur);
+			        
 			        }
 			        	
 			} catch (SQLException e) {
@@ -77,7 +81,7 @@ public class SQLInterface1 {
 				e.printStackTrace();
 			}
 	       
-		return kleur;
+		
 	}
 	
 	public void sluitConnectie()
