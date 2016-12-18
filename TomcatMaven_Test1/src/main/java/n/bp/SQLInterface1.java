@@ -12,13 +12,14 @@ import java.util.Date;
 public class SQLInterface1 {
 	
 	private Connection connection = null;
-	private String kleur = "";
+	private String voornaam = "";
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		String achternaam = "Facello";
 		SQLInterface1 sqlint1 = new SQLInterface1();
 		sqlint1.setConnection();
-		sqlint1.getkleur();
+		sqlint1.getVoornaam(achternaam);
 		sqlint1.sluitConnectie();
 		
 	}
@@ -61,27 +62,26 @@ public class SQLInterface1 {
 		
 	}
 	
-	public void getkleur() {
+	public String getVoornaam(String achternaam) {
 
 			Statement stmt = null;
-			String query = "Select * from employees limit 20";
+			//String query = "Select * from employees limit 20";
+			String query = "Select first_name from employees where last_name =" + "\"" + achternaam + "\" limit 1";
 			
 			try {
 				stmt = this.connection.createStatement();
 				 ResultSet rs = stmt.executeQuery(query);
 			        
 			        while (rs.next()) {
-			        	kleur = rs.getString("first_name");
-			        	System.out.println(kleur);
-			        
+			        	voornaam = rs.getString("first_name");
+			        	System.out.println(voornaam);
 			        }
 			        	
 			} catch (SQLException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-	       
-		
+			return voornaam;
 	}
 	
 	public void sluitConnectie()
@@ -98,13 +98,4 @@ public class SQLInterface1 {
 
 
 }
-
-
-
-
-
-
-		
- 
-
 
