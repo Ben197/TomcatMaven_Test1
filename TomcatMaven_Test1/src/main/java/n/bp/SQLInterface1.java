@@ -41,7 +41,7 @@ public class SQLInterface1 {
 		try {
 			
 			connection = DriverManager.getConnection("jdbc:mariadb://accmdb01.bpittens.nl:3306/employees?user=mariadb&password=Bwahlbs1967#");
-			System.out.println("geslaagd");
+			System.out.println("geslaagdjes");
 			// 
 			
 		} catch (SQLException e) {
