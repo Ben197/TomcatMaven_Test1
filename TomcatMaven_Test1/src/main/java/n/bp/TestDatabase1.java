@@ -8,6 +8,8 @@ public class TestDatabase1 {
 		System.out.println("-------------");
 		System.out.println("TestDatabase2 is aangemaakt");
 		System.out.println("-------------");
+		System.out.println("TestDatabase3 is aangemaakt");
+		System.out.println("-------------");
 
 		
 
