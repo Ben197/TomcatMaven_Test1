@@ -6,6 +6,7 @@ public class testBP1 {
 		// TODO Auto-generated method stub
 		System.out.println("krijg een dikke");
 		System.out.println("---------------");
+		System.out.println("BranchtestBP1---------------");
 	}
 
 }
