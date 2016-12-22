@@ -14,7 +14,5 @@ public class testBP1 {
 
 		System.out.println("Extra functionaliteit BrancheBP2---------------");
 		System.out.println("Extra functionaliteit BrancheBP2 en nog wat---------------");
-		
-
 	}
 }
