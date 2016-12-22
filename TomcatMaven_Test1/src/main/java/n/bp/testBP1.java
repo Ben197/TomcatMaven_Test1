@@ -10,9 +10,13 @@ public class testBP1 {
 		System.out.println("---------------");
 		
 
+
 		System.out.println("eerste regel Branche BP1");
 
 		System.out.println("Extra functionaliteit BrancheBP2---------------");
 		System.out.println("Extra functionaliteit BrancheBP2 en nog wat---------------");
+
+		System.out.println("eerste regel Branche BP1");
+
 	}
 }
